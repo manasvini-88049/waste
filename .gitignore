@@ -1,3 +1,8 @@
-client/
+#ignore node modules folder
+node_modules/
+
+#ignore venv 
 venv/
+
+#ignore waste_model
 waste_model.keras
