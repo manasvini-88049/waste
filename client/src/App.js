@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+/*import axios from "axios";*/
 
 function App() {
   const [data, setData] = useState("");
   const [val, setVal] = useState("Upload image to predict");
   
   const [filename, setFilename] = useState("No file Uploaded")
-
+/*
   useEffect(() => {
     fetch("http://localhost:5000")
       .then((res) => res.json())
@@ -15,6 +15,7 @@ function App() {
         setData(data.message);
       });
   }, []);
+  */
   const [file, setFile] = useState(null);
 
   const handleSubmit = async (event) => {
@@ -22,7 +23,7 @@ function App() {
 
     const formData = new FormData();
     formData.append("file", file);
-
+/*
     try {
       axios.post("http://localhost:5000/upload", formData).then((res) => {
         console.log(res.data.message);
@@ -34,6 +35,7 @@ function App() {
     }
 
   };
+  */
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     setFilename(file.name);
